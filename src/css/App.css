@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  appearance: none;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+:root {
+  --size-1: 0.25em;
+  --size-2: 0.5em;
+  --size-3: 0.75em;
+  --size-4: 1em;
+  --size-5: 1.5em;
+  --size-6: 2em;
+  --size-7: 3em;
+  --size-8: 4em;
+  --size-9: 8em;
+  --size-10: 16em;
+  --font-weight-700: 700;
+  --lightness-offset: 0%;
+  --color-primary: hsl(0, 0%, 100%);
+  --color-secondary: hsl(0, 0%, 90%);
+  --color-tetriary: hsl(0, 0%, 40%);
+  --color-accent: hsl(100, 50%, 50%);
+  --box-shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+body {
+  background-color: var(--color-secondary);
+}
+.App {
+  width: 100%;
+  max-width: 500px;
+}
+.card {
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.w100 {
+  width: 100%;
+}
+
+.mw-500 {
+  max-width: 500px;
+}
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.px-2 {
+  padding-left: var(--size-2);
+  padding-right: var(--size-2);
+}
+.px-4 {
+  padding-left: var(--size-4);
+  padding-right: var(--size-4);
+}
+
+.py-2 {
+  padding-top: var(--size-2);
+  padding-bottom: var(--size-2);
+}
+
+.py-4 {
+  padding-top: var(--size-4);
+  padding-bottom: var(--size-4);
+}
+.my-4 {
+  margin-top: var(--size-4);
+  margin-bottom: var(--size-4);
+}
+.mt-8 {
+  margin-top: var(--size-8);
+}
+.mt-9 {
+  margin-top: var(--size-9);
+}
+
+.border-none {
+  border: none;
+}
+.border-black {
+  border-color: var(--color-tetriary);
+}
+.border-solid {
+  border-style: solid;
+}
+.border-1 {
+  border-width: 1px;
+}
+.border-radius-2 {
+  border-radius: var(--size-2);
+}
+.background-primary {
+  background-color: var(--color-primary);
+}
+.background-accent {
+  background-color: var(--color-accent);
+}
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.gap-2 {
+  gap: var(--size-2);
+}
+.gap-4 {
+  gap: var(--size-4);
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.vertical-align-center {
+  align-items: center;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-center {
+  justify-content: center;
+}
+.text-700 {
+  font-weight: var(--font-weight-700);
+}
+
+.box-shadow-1 {
+  box-shadow: var(--box-shadow-1);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.z-index-1 {
+  z-index: 100;
+}
