@@ -8,3 +8,10 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+let seconds = 0;
+const setSeconds = () => {
+  seconds++;
+  document.getElementById("timer").textContent = seconds;
+};
+setInterval(setSeconds, 1000);

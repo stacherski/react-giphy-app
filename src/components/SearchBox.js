@@ -8,6 +8,7 @@ const SearchBox = ({ searchTerm, setOffset, offset, limit, totalImages }) => {
     searchTerm(text);
     setOffset(0);
   };
+
   return (
     <div className='background-primary w100 fixed flex gap-4 flex-column px-2 py-4 z-index-1 box-shadow-1'>
       <form onSubmit={onSubmit}>
@@ -26,8 +27,8 @@ const SearchBox = ({ searchTerm, setOffset, offset, limit, totalImages }) => {
         </div>
       </form>
       <div className='mx-auto w100 mw-500 background-accent py-2 px-4'>
-        Load limit is: {limit}, Total images loaded: {offset + limit}/
-        {totalImages}
+        Limit: {limit}, Images: {offset + limit}/{totalImages}, Wasted:{" "}
+        <span id='timer'></span> seconds
       </div>
     </div>
   );

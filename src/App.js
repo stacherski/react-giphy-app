@@ -17,12 +17,12 @@ function App() {
   useEffect(() => {
     const fetchData = () => {
       fetch(
-        `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIPHY_API_KEY_TWO}&q=${searchTerm}&limit=${limit}&offset=${offset}&rating=g&lang=en`
+        `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIPHY_API_KEY_THREE}&q=${searchTerm}&limit=${limit}&offset=${offset}&rating=g&lang=en`
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           setTotalImages(data.pagination.total_count);
+          console.log(data.data);
           offset === 0
             ? setImages(data.data)
             : setImages((previousData) => [...previousData, ...data.data]);
